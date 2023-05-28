@@ -1,12 +1,13 @@
 ﻿// 二分查找法.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
-
+#define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-
 int main()
 {
 	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
-	int k = 7;
+	int k = 0;
+	printf("请输入你要查找的值：");
+	scanf("%d", &k);
 	int sz = sizeof(arr) / sizeof(arr[0]);//计算数组元素个数
 	int left = 0;
 	int right = sz - 1;
