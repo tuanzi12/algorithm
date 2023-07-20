@@ -24,7 +24,7 @@ void LocateList();  //查找信息
 void AlterList();  //修改信息
 void DeleteList();  //删除记录
 void DisplayList();  //显示记录
-void quit();  //退出菜单
+void DestroyList();  //退出菜单
 
 /*主函数*/
 int main() {
@@ -45,7 +45,7 @@ void printmenu() {
     printf("\t|                                                |\n");
     printf("\t|     5.删除记录              6.显示记录         |\n");
     printf("\t|                                                |\n");
-    printf("\t|     7.退出菜单                                |\n");
+    printf("\t|     7.退出菜单                                 |\n");
     printf("\t|                                                |\n");
     printf("\t--------------------------------------------------\n");
     printf("请选择功能（1-7）：");
@@ -70,7 +70,7 @@ void printmenu() {
         DisplayList();
         break;
     case 7:
-        quit();
+        DestroyList();
         break;
     default:
         printf("输入有误，请重新选择（1-7）：");
@@ -255,7 +255,7 @@ void DisplayList() {
     printmenu();
 }
 
-void quit() {
+void DestroyList() {
     cu* p;
     while (head != NULL) {
         p = head;
